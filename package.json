@@ -1,0 +1,30 @@
+{
+  "name": "ng-fcm",
+  "version": "0.0.1",
+  "description": "A wrapper of Firebase Cloud Messaging (FCM)",
+  "main": "src/fcm.js",
+  "dependencies": {
+    "angular": "^1.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvelasquez/ng-fcm.git"
+  },
+  "keywords": [
+    "fcm",
+    "firebase",
+    "firebase cloud messaging",
+    "angular",
+    "ng"
+  ],
+  "author": "Danilo Velasquez Urrutia (danilo.velasquez@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dvelasquez/ng-fcm/issues"
+  },
+  "homepage": "https://github.com/dvelasquez/ng-fcm#readme"
+}

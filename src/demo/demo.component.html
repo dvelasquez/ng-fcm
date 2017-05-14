@@ -1,0 +1,59 @@
+<div>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        <!-- Header section containing title -->
+        <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+                <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
+                    <h3>Firebase Cloud Messaging</h3>
+                </div>
+            </div>
+        </header>
+
+        <main class="mdl-layout__content mdl-color--grey-100">
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+
+                <!-- Container for the Table of content -->
+                <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+                    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                        <!-- div to display to generate the Instance ID token -->
+                        <div>
+                            <h4>Push to generate a Instance ID token</h4>
+                            <p style="word-break: break-all;">Status: {{dfc.data.status}}</p>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    ng-click="dfc.generateToken()">Generate Token
+                            </button>
+                        </div>
+                        <!-- div to display the generated Instance ID token -->
+                        <div id="token_div">
+                            <h4>Instance ID Token</h4>
+                            <p style="word-break: break-all;">{{dfc.data.browserToken}}</p>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    ng-click="dfc.deleteToken(dfc.data.browserToken)">Delete Token
+                            </button>
+                        </div>
+                        <!-- div to send and display notifications -->
+                        <div>
+                            <h4>Test Message</h4>
+                            <p>To send a notification, you need put your server token in the input below. Don't worry, this will be saved in your browser.</p>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="serverToken" ng-model="dfc.data.serverToken">
+                                <label class="mdl-textfield__label" for="serverToken">Server Api KEY</label>
+                            </div>
+                            <div>{{dfc.data.notification | json}}</div>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    ng-click="dfc.sendNotification(null, dfc.data.browserToken, false, dfc.data.serverToken)">Send message
+                            </button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                                    ng-click="dfc.sendNotification(null, dfc.data.browserToken, true, dfc.data.serverToken)">Send message in
+                                10 seconds
+                            </button>
+                        </div>
+                        <!-- div to display messages received by this app. -->
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>

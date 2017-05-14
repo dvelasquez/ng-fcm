@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo NG-FCM</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+</head>
+<body>
+<demo></demo>
+<!--// TODO: Replace with your project's customized code snippet-->
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: '<your-api-key>',
+        authDomain: '<your-auth-domain>',
+        databaseURL: '<your-database-url>',
+        storageBucket: '<your-storage-bucket>'
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="../../node_modules/angular/angular.js"></script>
+<script src="demoApp.js"></script>
+<script src="../ng-fcm.js"></script>
+</body>
+</html>
